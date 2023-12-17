@@ -1,7 +1,7 @@
 proftpd:
   build: .
   volumes:
-    - ./proftpd.conf:/usr/local/etc/proftpd.conf
+    - ./proftpd.conf:/etc/proftpd/proftpd.conf
     - ./data/ftp:/data
   ports:
     - "20:20"
