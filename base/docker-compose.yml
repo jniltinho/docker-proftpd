@@ -22,9 +22,9 @@ services:
     networks:
       - ftp-network
     depends_on:
-      - db
+      - mariadb
     links:
-      - db
+      - mariadb
 
   #Apache Service
   webserver:
@@ -40,9 +40,9 @@ services:
       - ftp-network
 
   #MariaDB Service
-  db:
+  mariadb:
     image: mariadb:10-jammy
-    container_name: db
+    container_name: mariadb
     restart: unless-stopped
     tty: true
     ports:
